@@ -1,0 +1,19 @@
+{
+  "name": "edge-extension-for-nexus",
+  "version": "1.0.0",
+  "description": "MS Edge Extension to parse Nexus Mods pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Buhr",
+  "license": "ISC",
+  "devDependencies": {
+    "webextension-toolbox": "^4.0.3"
+  }
+}
+"scripts": {
+  "build": "webpack --mode production",
+  "watch": "webpack --watch --mode development"
+}
+

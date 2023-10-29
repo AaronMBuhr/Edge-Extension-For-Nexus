@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Edge Extension for Nexus Mods Scraping",
+  "version": "1.0.0",
+  "description": "Simple extension to read summary information from Nexus Mods page and paste to clipboard.",
+  "icons": {
+    "48": "icons/nexus-mods-white-48x48.png",
+    "96": "icons/nexus-mods-white-96x96.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "browser_action": {
+    "default_icon": "icons/nexus-mods-white-48x48.png",
+    "default_popup": "popup.html",
+    "default_title": "Edge Extension for Nexus Mods Scraping"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nexusmods.com/*", "http://www.nexusmods.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
